@@ -1,0 +1,41 @@
+resetCanvas 600 600
+setColor 0 255 0
+drawLine line1 0 0 500 250 DDA
+clip line1 50 50 400 200 Cohen-Sutherland
+setColor 255 0 0
+drawLine line2 500 250 250 500 Bresenham
+translate line2 -50 -50
+drawLine line3 100 100 100 500 Bresenham
+clip line3 0 0 200 200 Liang-Barsky
+drawLine line4 200 500 400 300 Bresenham
+clip line4 250 200 350 400 Liang-Barsky
+saveCanvas 1
+resetCanvas 600 600
+setColor 0 0 255
+drawPolygon polygon1 100 100 500 500 100 500 DDA
+saveCanvas 2
+resetCanvas 600 600
+drawPolygon polygon2 200 100 300 100 350 200 300 300 200 300 150 200 Bresenham
+drawPolygon polygon3 200 100 300 100 350 200 300 300 200 300 150 200 Bresenham
+scale polygon3 200 200 1.5
+setColor 255 0 0
+drawPolygon polygon4 200 100 300 100 350 200 300 300 200 300 150 200 Bresenham
+rotate polygon4 300 200 30
+saveCanvas 3
+resetCanvas 600 600
+setColor 0 255 0
+drawEllipse ellipse1 100 100 500 400
+rotate ellipse1 100 100 45
+drawEllipse ellipse2 100 100 500 400
+scale ellipse2 50 50 0.7
+setColor 255 0 0
+drawEllipse ellipse3 130 181 339 100
+drawEllipse ellipse4 204 332 377 403
+saveCanvas 4
+resetCanvas 600 600
+drawCurve curve1 50 200 100 100 150 200 Bezier
+drawCurve curve2 50 400 100 300 150 400 200 300 Bezier
+setColor 0 0 255
+drawCurve curve3 250 400 300 300 350 400 400 300 B-spline
+drawCurve curve4 250 200 300 50 350 250 400 100 450 200 B-spline
+saveCanvas 5
